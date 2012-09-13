@@ -11,10 +11,10 @@ describe "Static pages" do
 
     it { should have_selector 'h1', text: 'Sample App' }
     it { should have_selector 'title',
-                        text: 'Ruby on Rails Tutorial Sample App' }
+                        text: full_title('') }
 
     it { should_not have_selector 'title',
-                            text: '| Home' }
+                            text: full_title('Home') }
    end
 
   describe "Help page" do
@@ -22,7 +22,7 @@ describe "Static pages" do
 
     it { should have_selector 'h1', text: 'Help' }
     it { should have_selector 'title',
-                        text: '| Help' }
+                        text: full_title('Help') }
 
  end
 
@@ -31,7 +31,7 @@ describe "Static pages" do
 
     it { should have_selector 'h1', text: 'About Us' }
     it { should have_selector 'title',
-                        text: '| About Us' }
+                        text: full_title('About Us') }
 
  end
 
@@ -40,7 +40,7 @@ describe "Static pages" do
 
     it { should have_selector 'h1', text: 'Contact' }
     it { should have_selector 'title',
-                        text: '| Contact' }
+                        text: full_title('Contact') }
 
  end
 end
