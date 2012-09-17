@@ -1,0 +1,5 @@
+sudo -u postgres createuser -D -P saitodisse
+
+heroku create --stack cedar
+git push heroku master
+
